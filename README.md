@@ -33,12 +33,12 @@ App\Models\Product::factory()->count(10)->create()
 php artisan serve
 ```
 
-## APIにアクセス
-POST http://localhost:8000/api/register
-POST http://localhost:8000/api/login
+## APIにアクセス  
+POST http://localhost:8000/api/register  
+POST http://localhost:8000/api/login  
 
 ページャー:  
-GET http://localhost:8000/api/products/list
+GET http://localhost:8000/api/products/list  
 
 ## Vue パッケージのインストール
 ```console
@@ -48,6 +48,9 @@ yarn
 ## Web アプリの起動
 ```console
 yarn serve
+```
+```
+http://localhost:8081/
 ```
 
 ## Electron のインストール
