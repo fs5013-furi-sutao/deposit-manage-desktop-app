@@ -98,6 +98,7 @@ export default {
             (data) => {
               this.message = data.message;
               this.successful = true;
+              console.log(data)
             },
             (error) => {
               this.message =

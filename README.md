@@ -8,7 +8,27 @@ docker-compose up -d
 
 ## Laravel ライブラリのインストール
 ```console
+cd ./backend-laravel
+```
+```console
 composer install
+```
+
+## .env ファイルの作成
+/backend-laravel 直下の .env.example をコピーして .env ファイルを作成
+```console
+cp ./.env.example ./.env
+```
+
+## DB 接続情報の記載
+.env ファイルの DB 接続情報を書き直す
+```text
+DB_CONNECTION=mysql
+DB_HOST=192.168.99.100
+DB_PORT=13306
+DB_DATABASE=products
+DB_USERNAME=fsedu
+DB_PASSWORD=secret
 ```
 
 ## アプリキーの生成
@@ -21,11 +41,21 @@ php artisan key:generate
 php artisan migrate
 ```
 
+## Laravel Passport をインストール
+```console
+php artisan passport:install
+```
+
 ## ダミーデータの生成
 ```console
 php artisan tinker
 App\Models\User::factory()->count(10)->create()
 App\Models\Product::factory()->count(10)->create()
+```
+
+## URL Resource の確認
+```console
+php artisan route:list
 ```
 
 ## バックエンドサーバの起動

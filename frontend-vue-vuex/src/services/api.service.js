@@ -12,7 +12,7 @@ Vue.use(VueFlashMessage, {
 });
 
 const vm = new Vue();
-const baseURL = 'http://localhost:4000/api/v1/';
+const baseURL = 'http://localhost:8000/api/';
 
 const handleError = fn => (...params) =>
   fn(...params).catch(error => {
